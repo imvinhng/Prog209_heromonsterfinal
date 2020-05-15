@@ -3,13 +3,26 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Simple Canvas Game</title>
+		<style>
+			button {
+				display : inline-block;
+			}
+			input {
+				display : inline-block;
+			}
+		</style>
 	</head>
 	<body>
 		<script src="js/game.js"></script>
-		<button id="toggle">Scene</button>
+		<button id="toggle" >Atlas</button>
+		<button id="psychedelics">Psychedelics</button>
 		<input type="image" id ="hero" src="images/sprites/hero.png">
 		<input type="image" id="monster" src="images/sprites/monster.png">
 		<input type="image" id="flash" src="images/sprites/flash.png">
 		<input type="image" id="pixilart" src="images/sprites/pixilart.png">
+		
+		<audio controls autoplay loop >
+			<source id="sounds" src="audio/Music_MainGame_NOTFINAL.ogg" type="audio/ogg" >
+		</audio>
 	</body>
 </html>
