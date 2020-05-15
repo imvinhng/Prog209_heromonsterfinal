@@ -7,23 +7,43 @@ document.body.appendChild(canvas);
 
 // Background image
 var bgReady = false;
-var bgImage = new Image(1000,571);
+var bgImage = new Image();
 bgImage.onload = function () {
 	bgReady = true;
 };
-images = ["images/world-map-max.jpg","images/usmap2.jpg","images/map3.jpg","images/map4.jpg","images/map5.jpg","images/map10.jpg","images/world-map-2.jpg","images/world-political-map-new.jpg"];
 
+
+// Background audio
+var bgAudioReady = false;
+var bgAudio = new Audio();
+bgAudio.onload = function () {
+	bgAudioReady = true;
+	console.log("Audio's ready");
+};
+
+
+images = ["images/world-map-max.jpg","images/usmap2.jpg","images/map3.jpg","images/map4.jpg","images/map5.jpg","images/map10.jpg","images/world-map-2.jpg","images/world-political-map-new.jpg"];
+psch_images = ["images/psch1.png","images/psch2.png","images/psch3.jpg","images/psch4.jpg","images/psch5.jpg", "images/psch6.jpg","images/psch7.jpg" ]
 bgImage.src = images[0];
+bgAudio.src = "audio/Music_MainGame_NOTFINAL.ogg";
+
 let i = 1 ;
 document.addEventListener("DOMContentLoaded", function (event) {
 		document.getElementById('toggle').addEventListener('click', function(){
 			bgImage.src = images[i++];
-			console.log(i);
 			if (i== images.length) {
 				i=0;
 			}
-							
+			bgAudio.src = "audio/Music_MainGame_NOTFINAL.ogg";			
 		});
+		document.getElementById('psychedelics').addEventListener('click', function(){
+			bgImage.src = psch_images[i++];
+			if (i== psch_images.length) {
+				i=0;
+			}
+			bgAudio.src = "audio/Music_MenuLoop.ogg";
+		});
+
 
 		document.getElementById('hero').addEventListener('click', function(){
 			heroImage.src = sprite[0]	
