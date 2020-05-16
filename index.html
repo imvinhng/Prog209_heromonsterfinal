@@ -4,25 +4,38 @@
 		<meta charset="utf-8">
 		<title>Simple Canvas Game</title>
 		<style>
-			button {
+			a, button, input {
 				display : inline-block;
 			}
-			input {
-				display : inline-block;
-			}
+
+
 		</style>
+		<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"/> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+		
 	</head>
 	<body>
 		<script src="js/game.js"></script>
+
 		<button id="toggle" >Atlas</button>
 		<button id="psychedelics">Psychedelics</button>
+		<button id="panic">Panic</button>
 		<input type="image" id ="hero" src="images/sprites/hero.png">
 		<input type="image" id="monster" src="images/sprites/monster.png">
 		<input type="image" id="flash" src="images/sprites/flash.png">
 		<input type="image" id="pixilart" src="images/sprites/pixilart.png">
 		
+		<!-- Background music -->
 		<audio controls autoplay loop >
-			<source id="sounds" src="audio/Music_MainGame_NOTFINAL.ogg" type="audio/ogg" >
+			<source data-icon="audio" id="sounds" src="audio/Music_MainGame_NOTFINAL.ogg" type="audio/ogg" >
 		</audio>
+
+		<!-- UI Control for Mobile App -->
+		<button id="up">^</button>
+		<button id="left">-</button>
+		<button id="right">+</button>
+		<button id="down">v</button>
+
+		
 	</body>
 </html>
